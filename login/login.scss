@@ -1,0 +1,131 @@
+ 
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+$error-color: #e74c3c;
+$light-color: #ecf0f1;
+$dark-color: #2c3e50;
+$text-color: #333;
+$text-light: #fff;
+
+$spacing-small: 8px;
+$spacing-medium: 16px;
+$spacing-large: 24px;
+$spacing-xlarge: 32px;
+
+$border-radius: 4px;
+$border-radius-large: 8px;
+
+$box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+$box-shadow-hover: 0 4px 8px rgba(0, 0, 0, 0.15);
+
+ 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: $spacing-medium;
+}
+
+ 
+.login-container {
+  background: white;
+  border-radius: $border-radius-large;
+  box-shadow: $box-shadow;
+  padding: $spacing-xlarge;
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: $spacing-xlarge;
+
+  h1 {
+    color: $dark-color;
+    font-size: 1.8rem;
+    margin-bottom: $spacing-small;
+  }
+
+}
+ 
+.form-group {
+  margin-bottom: $spacing-large;
+
+  label {
+    display: block;
+    margin-bottom: $spacing-small;
+    font-weight: 600;
+    color: $dark-color;
+  }
+
+  input {
+    width: 100%;
+    padding: $spacing-medium;
+    border: 1px solid #ddd;
+    border-radius: $border-radius;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+
+    &:focus {
+      outline: none;
+      border-color: $primary-color;
+      box-shadow: 0 0 0 2px rgba($primary-color, 0.2);
+    }
+  }
+
+  .error-message {
+    color: $error-color;
+    font-size: 0.875rem;
+    margin-top: $spacing-small;
+  }
+}
+ 
+.login-button {
+  display: block;
+  width: 100%;
+  padding: $spacing-medium;
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  border-radius: $border-radius;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: $spacing-large;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+    box-shadow: $box-shadow-hover;
+  }
+}
+ 
+.login-footer {
+  text-align: center;
+  margin-top: $spacing-large;
+  font-size: 0.9rem;
+
+  a {
+    color: $primary-color;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: darken($primary-color, 10%);
+      text-decoration: underline;
+    }
+  }
+
+  .divider {
+    margin: 0 $spacing-small;
+    color: #ccc;
+  }
+}
